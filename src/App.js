@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import { AppLayout } from './components/AppLatout';
+import AppRoutes from './components/Approutes';
+import 'antd/dist/antd.css';
+import 'antd/dist/antd.css';
+import { CurrentUserProvider } from './context/context';
+import { useEffect } from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+    <CurrentUserProvider>
+    <BrowserRouter>
+      <AppLayout children={<AppRoutes/>}/>
+    </BrowserRouter>
+    </CurrentUserProvider>
     </div>
   );
 }

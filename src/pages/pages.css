@@ -1,0 +1,26 @@
+.login {
+    border: gray 2px solid;
+    border-radius: 10px;
+    margin-top: 200px;
+    padding: 50px;
+}
+.site-card-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: auto;
+}
+.card {
+    width: 100%;
+}
+.cardBlock {
+    min-width: 300px;
+    width: 350px;
+    padding: 10px;
+    max-height: 200px;
+
+  
+}
