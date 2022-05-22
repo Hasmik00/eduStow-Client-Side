@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Input } from "antd";
 import { CurrentUserContext } from "../context/context";
 import { Button } from "antd";
-import logo from "../logo.svg";
+import logo from "../logo.png";
 import "./components.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
