@@ -28,7 +28,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login">
+    <div className="login" >
       <Form
         name="basic"
         labelCol={{
@@ -76,7 +76,7 @@ const Login = () => {
           ]}
         >
           <Input size="large" placeholder="Email" prefix={<MailOutlined />} />
-        </Form.Item>
+        </Form.Item >
         <Form.Item
           label="Password"
           name="password"
@@ -96,7 +96,8 @@ const Login = () => {
             span: 16,
           }}
         >
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit"   
+          style={{backgroundColor: '#7d9391', borderColor:'#7d9391'}}>
             {pathname === "/login" ? "Log In" : "Sign In"}
           </Button>
         </Form.Item>

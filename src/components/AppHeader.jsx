@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { Input } from "antd";
 import { CurrentUserContext } from "../context/context";
 import { Button } from "antd";
-import logo from "../logo.png";
+import logo from "../custom logo.png";
 import "./components.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+
 const { Search } = Input;
 
 const AppHeader = () => {
@@ -18,8 +18,8 @@ const AppHeader = () => {
       <div className="logo" onClick={() => navigation("/")}>
         <img src={logo} alt="logo" />
       </div>
-      <div>
-        <Search
+      <div >
+        <Search 
           placeholder="Search for a course"
           allowClear
           enterButton="Search"
@@ -29,7 +29,8 @@ const AppHeader = () => {
       </div>
       <div className="login_buttons">
         <Button
-          type="primary"
+          type="secondary"
+          style={{backgroundColor: '#7d9391', borderColor:'#7d9391'}}
           onClick={() => {
             if (isAuthenticated.isLoggedIn) {
               dispatch({ type: "SET_UNAUTHORIZED", payload: null });
@@ -41,7 +42,7 @@ const AppHeader = () => {
           {isAuthenticated.isLoggedIn ? "LOG OUT" : "LOG IN"}
         </Button>
         {!isAuthenticated.isLoggedIn && (
-          <Button onClick={() => navigation("signin")}>SIGN IN</Button>
+          <Button  style={{backgroundColor: '#d8e8ef',borderColor:'#7d9391'}} onClick={() => navigation("signin")}>SIGN IN</Button>
         )}
       </div>
     </div>

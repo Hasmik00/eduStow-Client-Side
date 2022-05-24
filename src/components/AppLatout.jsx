@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from "antd";
 import AppHeader from "./AppHeader";
 import "./components.css";
-const { Header, Content } = Layout;
+const { Header, Content, Footer } = Layout;
 
 export const AppLayout = ({ children }) => {
   return (
@@ -11,6 +11,7 @@ export const AppLayout = ({ children }) => {
         <AppHeader />
       </Header>
       <Content className="content">{children}</Content>
+      <Footer style={{textAlign: 'center', color:'#7d9391'}}><b>eduStow</b></Footer>
     </Layout>
   );
 };
